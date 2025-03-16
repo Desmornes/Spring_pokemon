@@ -1,0 +1,318 @@
+{
+  "name": "Bruno_Pokemon",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Supprimer_Pokemon",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:8085/api/pokemon/8",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc0MTk1Mjk2OCwiZXhwIjoxNzQxOTU2NTY4LCJyb2xlcyI6WyJST0xFX0FETUlOIl19.Ih7Bc9AtBx9XiM47npvhY2aPxwpieCv4aIvRAUYrzvOWbZLgG2P-mwUOyKFH51rd9hQoO9ncLyZys41xej6ZTg",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\": 8,\n  \"name\": \"Carapuce\",\n  \"type\": \"Eau\",\n  \"baseExperience\": 7\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Test_port",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:8085",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Créer_compte",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8085/api/users/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"username\": \"testuser\",\n  \"password\": \"password\",\n  \"role\": \"USER\"\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Recuperer_pokemon",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8085/api/pokemon/pikachu",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": ""
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "RecupererTousPokemon",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8085/api/pokemon",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc0MTk1Mjk2OCwiZXhwIjoxNzQxOTU2NTY4LCJyb2xlcyI6WyJST0xFX0FETUlOIl19.Ih7Bc9AtBx9XiM47npvhY2aPxwpieCv4aIvRAUYrzvOWbZLgG2P-mwUOyKFH51rd9hQoO9ncLyZys41xej6ZTg",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{userToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "modifier_Pokemon",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8085/api/pokemon/1",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\": \"Pikachu\",\n  \"type\": \"Electric\",\n  \"baseExperience\": 112\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{userToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "AjoutPokemon",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:8085/api/pokemon",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\": \"Bulbasaurs\",\n  \"type\": \"Grass\",\n  \"baseExperience\": 64\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{userToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "test_token",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:8085/api/login",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"username\": \"testuser\",\n  \"password\": \"password\"\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "var jsonData =res.getBody();\nbru.setEnvVar(\"userToken\",jsonData.token);",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "test_endpoint",
+      "seq": 10,
+      "request": {
+        "url": "http://localhost:8085/user/test",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc0MTg2MjI4NiwiZXhwIjoxNzQxODY1ODg2LCJyb2xlcyI6WyJST0xFX0FETUlOIl19.oUt1wKWm7yEV7wHYAtBflzm-GZu0jGsdICTQsPxwCSvzYvvm-6lGhvAQ7h05KkOjFJB5ntt9b_ayqndO2DLqOA",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{userToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Test_scraping",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:8080/api/pokemon/{Pikachu}/description",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "KMjnFyPU982XS7ZUtDLbI",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "userToken",
+          "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc0MjE1MDY3NSwiZXhwIjoxNzQyMTU0Mjc1LCJyb2xlcyI6WyJST0xFX0FETUlOIl19.CyEvoKjwDtDMSP3kH_yqf3NhwvEX-NxnTha3F803TZ3zHaNK1E3Xuw75SMAReQoxj128Nge6WJsTtIwBjNeGGg",
+          "secret": false,
+          "enabled": true,
+          "type": "text"
+        }
+      ],
+      "name": "Token"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Bruno_Pokemon",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
